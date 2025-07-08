@@ -2,8 +2,6 @@
 
 A classic implementation of the Snake game built with Python and the Pygame library. This is a simple, fun project perfect for beginners learning game development concepts.
 
-![Screenshot of Snake Game](https://i.imgur.com/O5gXg2W.png)
-*(You can replace this with your own screenshot after you run the game!)*
 
 ## Features
 
