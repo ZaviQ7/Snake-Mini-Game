@@ -1,15 +1,16 @@
 # Python Snake Mini-Game
 
-A classic implementation of the Snake game built with Python and the Pygame library. This is a simple, fun project perfect for beginners learning game development concepts.
-
+An enhanced version of the classic Snake game built with Python and Pygame. This project features a full graphical user interface (GUI) menu, configurable game settings, visual themes, and session high score tracking.
 
 ## Features
 
-*   Classic snake gameplay: control the snake to eat the food.
-*   The snake grows longer each time it eats.
-*   The game ends if the snake hits the wall or itself.
-*   Real-time score tracking.
-*   Option to play again or quit after a game over.
+*   **Interactive GUI Menu:** A full start screen to control all settings before playing.
+*   **Configurable Difficulty:** Choose between Slow, Normal, and Fast snake speeds directly from the menu.
+*   **Configurable Block Size:** Select Small, Medium, or Large block sizes to change the game's look and challenge.
+*   **Light & Dark Themes:** Instantly switch between a sleek dark mode and a clean light mode.
+*   **Session High Score:** The game tracks and displays the highest score achieved since the program was launched.
+*   **Automatic Fullscreen:** The game launches in an immersive, borderless fullscreen mode.
+*   **Classic, Responsive Gameplay:** Core snake mechanics are smooth and bug-free.
 
 ## How to Run
 
@@ -22,8 +23,8 @@ A classic implementation of the Snake game built with Python and the Pygame libr
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/snake_game_gui.git
-    cd snake_game_gui
+    git clone https://github.com/ZaviQ7/Snake-Mini-Game.git
+    cd Snake-Mini-Game
     ```
 
 2.  **Install dependencies:**
@@ -44,6 +45,11 @@ A classic implementation of the Snake game built with Python and the Pygame libr
 
 ## Controls
 
+### In-Game
 *   **Arrow Keys**: Control the direction of the snake.
-*   **C Key**: Play Again (after a game over).
-*   **Q Key**: Quit the game (after a game over).
+
+### Menu & Game Over Screen
+*   **Mouse Click**: Select difficulty, block size, start the game, or toggle the theme.
+*   **C Key**: Play Again (from the "Game Over" screen).
+*   **Q Key**: Quit the game (from the "Game Over" screen).
+*   **ESC Key**: Quit the game from any screen at any time.
