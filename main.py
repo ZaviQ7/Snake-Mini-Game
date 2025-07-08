@@ -1,10 +1,8 @@
 import pygame
 import random
 
-# --- Initialization ---
 pygame.init()
 
-# --- Global Variables & Constants ---
 high_score = 0
 color_schemes = {
     'dark': {
@@ -22,17 +20,15 @@ BLOCK_SIZE_SETTINGS = {'Small': 10, 'Medium': 20, 'Large': 40}
 current_speed = DIFFICULTY_SETTINGS['Normal']
 current_block_size = BLOCK_SIZE_SETTINGS['Medium']
 
-# Screen Setup
 info = pygame.display.Info()
 SCREEN_WIDTH, SCREEN_HEIGHT = info.current_w, info.current_h
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption('Python Snake Mini-Game by ZaviQ7')
 
-# Fonts
-font_style = pygame.font.SysFont("bahnschrift", 45) # Made title font a bit bigger
+font_style = pygame.font.SysFont("bahnschrift", 45) 
 small_font = pygame.font.SysFont("comicsansms", 25)
 ui_font = pygame.font.SysFont("consolas", 20)
-credit_font = pygame.font.SysFont("bahnschrift", 22) # Font for the credit line
+credit_font = pygame.font.SysFont("bahnschrift", 22) 
 
 def draw_text(text, font, color, surface, x, y, center=False):
     textobj = font.render(text, 1, color)
@@ -51,7 +47,6 @@ def start_screen():
         colors = color_schemes[current_theme]
         screen.fill(colors['background'])
         
-        # --- MODIFIED: Title and Credit Line ---
         draw_text('Python Snake Game', font_style, colors['text'], screen, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 4, center=True)
         draw_text('by Zavi Q (GitHub: ZaviQ7)', credit_font, colors['text'], screen, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 4 + 45, center=True)
         
@@ -66,7 +61,6 @@ def start_screen():
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 click = True
 
-        # --- Settings Options ---
         draw_text('Difficulty:', small_font, colors['text'], screen, SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2)
         draw_text('Block Size:', small_font, colors['text'], screen, SCREEN_WIDTH / 2 + 50, SCREEN_HEIGHT / 2)
         
@@ -84,7 +78,6 @@ def start_screen():
             draw_text(name, ui_font, colors['text'], screen, btn_rect.centerx, btn_rect.centery, center=True)
             if btn_rect.collidepoint(mouse_pos) and click: current_block_size = size
 
-        # --- Main Buttons ---
         start_button_rect = pygame.Rect(SCREEN_WIDTH/2 - 100, SCREEN_HEIGHT * 0.8, 200, 50)
         theme_button_rect = pygame.Rect(SCREEN_WIDTH - 160, 10, 150, 40)
         pygame.draw.rect(screen, colors['button'], start_button_rect)
@@ -185,7 +178,6 @@ def game_loop(snake_speed, block_size):
                 if event.key == pygame.K_c:
                     return
 
-# --- Main Program Flow ---
 while True:
     start_screen()
     game_loop(current_speed, current_block_size)
